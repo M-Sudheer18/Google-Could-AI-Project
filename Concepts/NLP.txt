@@ -1,0 +1,392 @@
+NLP
+----
+NLP (Natural Language Processing) is a branch of Artificial Intelligence (AI) that enables computers to understand, interpret, and generate human language in text or speech form.
+
+NLP acts as a bridge between human language and machines.
+
+What is Text Preprocessing?
+---------------------------
+Text preprocessing is the process of cleaning and transforming raw text into a structured format that a machine learning or NLP model can understand.
+Raw text is noisy; preprocessing makes it usable.
+
+Why Text Preprocessing is Important
+ Removes noise and irrelevant data
+ Improves model accuracy
+ Reduces dimensionality
+ Standardizes text format
+
+
+What is Tokenization?
+----------------------
+Tokenization is the process of breaking text into smaller units called tokens so that a computer can process and understand language. Tokens can be words, sub-words, characters, or symbols.
+
+
+Why Tokenization is Important
+Computers understand numbers, not text
+Tokenization is the first step in NLP
+
+It enables:
+Text preprocessing
+Feature extraction
+Model training and inference
+
+Types of Tokenization
+1. Word Tokenization
+Splits text into words.
+"I love NLP"
+→ ["I", "love", "NLP"]
+
+2.Sentence Tokenization
+Splits text into sentences.
+"I love NLP. It is powerful."
+→ ["I love NLP.", "It is powerful."]
+
+3. Character Tokenization
+Splits text into characters.
+"AI"
+→ ["A", "I"]
+
+4. Subword Tokenization (Used in LLMs)
+Splits words into meaningful sub-units.
+"unbelievable"
+→ ["un", "believ", "able"]
+
+
+
+Stemming (in Natural Language Processing)
+-----------------------------------------
+
+Stemming is a text preprocessing technique in NLP used to reduce words to their root or base form, called a stem.
+The goal is to treat related words as the same word so that models can work more efficiently.
+
+Why Stemming is Used
+Reduces vocabulary size
+Improves search and text matching
+Helps machine learning models focus on meaning rather than word forms
+Speeds up text processing
+
+| Original Word | Stem  |
+| ------------- | ----- |
+| running       | run   |
+| runs          | run   |
+| runner        | run   |
+| studies       | studi |
+| studying      | studi |
+Note: The stem may not be a real dictionary word.
+
+
+Lemmatization (in Natural Language Processing)
+----------------------------------------------
+Lemmatization is a text preprocessing technique in NLP that converts a word into its base or dictionary form, called a lemma.
+Unlike stemming, lemmatization considers grammar, context, and part of speech (POS), so the output is always a valid word.
+
+
+Why Lemmatization is Used
+Preserves meaning and correctness
+Reduces different forms of a word to one standard form
+Improves semantic understanding
+Preferred in applications requiring high accuracy
+
+| Original Word | Lemma |
+| ------------- | ----- |
+| running       | run   |
+| runs          | run   |
+| better        | good  |
+| studies       | study |
+| children      | child |
+
+POS Tagging (Part-of-Speech Tagging)
+------------------------------------
+
+POS Tagging is an NLP technique used to assign a grammatical label (part of speech) to each word in a sentence based on its context and meaning.
+In simple terms, it tells what role each word plays in a sentence.
+
+| Tag | Meaning       | Example   |
+| --- | ------------- | --------- |
+| NN  | Noun          | dog, city |
+| NNS | Plural noun   | dogs      |
+| VB  | Verb (base)   | run       |
+| VBD | Verb (past)   | ran       |
+| VBG | Verb (gerund) | running   |
+| JJ  | Adjective     | good      |
+| RB  | Adverb        | quickly   |
+| PRP | Pronoun       | he, she   |
+| DT  | Determiner    | the, a    |
+| IN  | Preposition   | in, on    |
+
+
+Example Sentence
+Sentence:
+The boy is running fast
+
+| Word    | POS Tag |
+| ------- | ------- |
+| The     | DT      |
+| boy     | NN      |
+| is      | VBZ     |
+| running | VBG     |
+| fast    | RB      |
+
+
+
+NLU (Natural Language Understanding)
+------------------------------------
+Natural Language Understanding (NLU) is a subfield of Natural Language Processing (NLP) that focuses on enabling machines to understand the meaning, intent, and context of human language—not just process text.
+
+What NLU Actually Does
+NLU helps a system answer questions like:
+What does the user mean?
+What is the intent of the sentence?
+What are the entities mentioned?
+What is the context?
+
+
+Example
+
+User sentence:
+“Book a flight from Hyderabad to Delhi tomorrow”
+Output
+------
+{
+  "intent": "book_flight",
+  "entities": {
+    "source": "Hyderabad",
+    "destination": "Delhi",
+    "date": "tomorrow"
+  }
+}
+
+
+NLG (Natural Language Generation)
+---------------------------------
+Natural Language Generation (NLG) is a subfield of NLP that focuses on enabling machines to generate human-like, meaningful, and contextually correct text from structured or unstructured data.
+
+NLU → Understands human language
+NLG → Produces human language
+
+NLG converts data, intent, or meaning into natural language sentences that humans can easily understand.
+{
+  "city": "Hyderabad",
+  "temperature": 32,
+  "condition": "Sunny"
+}
+NLG Output:
+“The weather in Hyderabad is sunny with a temperature of 32°C.”
+
+
+Text Representation (Text Rep) in NLP
+---------------------------------------
+Text Representation is the process of converting human-readable text into numerical form so that machines and ML models can understand and process it.
+Machines do not understand text directly — they understand numbers.
+
+Why Text Representation Is Needed
+ML algorithms work only with numerical data
+Enables similarity measurement
+Required for classification, clustering, and generation
+Foundation for NLP, NLU, and NLG
+
+
+One-Hot Encoding (in Machine Learning & NLP)
+--------------------------------------------
+One-Hot Encoding (OHE) is a categorical data encoding technique used to convert categorical values into numerical form so that machine-learning models can process them.
+
+Each category is represented as a binary vector where:
+1 → category is present
+0 → category is absent
+
+| Color | Red | Blue | Green |
+| ----- | --- | ---- | ----- |       Each row has only one “1” → hence One-Hot.
+| Red   | 1   | 0    | 0     |
+| Blue  | 0   | 1    | 0     |
+| Green | 0   | 0    | 1     |
+
+
+Sentence:
+“I love NLP”
+| Word | I | love | NLP |
+| ---- | - | ---- | --- |
+| I    | 1 | 0    | 0   |
+| love | 0 | 1    | 0   |
+| NLP  | 0 | 0    | 1   |
+
+
+Bag of Words (BoW) in NLP
+--------------------------
+Bag of Words (BoW) is a text representation technique that converts text into numerical vectors based on word frequency, while ignoring grammar and word order.
+It is one of the simplest and most widely used NLP representations.
+
+Core Idea
+Create a vocabulary of all unique words
+Count how many times each word appears
+Represent text as a frequency vector
+Order and context do not matter — only word presence/count matters.
+
+Sentences:
+
+“I love NLP”
+“I love ML”
+
+Vocabulary:
+[I, love, NLP, ML]
+
+| Sentence | I | love | NLP | ML |
+| -------- | - | ---- | --- | -- |
+| S1       | 1 | 1    | 1   | 0  |
+| S2       | 1 | 1    | 0   | 1  |
+
+
+TF-IDF (Term Frequency – Inverse Document Frequency)       ---> Important
+----------------------------------------------------
+TF-IDF is a text representation technique used in NLP to measure how important a word is to a document relative to a collection of documents (corpus).It improves upon Bag of Words by reducing the weight of common words and increasing the weight of rare but meaningful words.
+Words that appear frequently in one document but rarely across all documents are more important.
+Common words like is, the, and get low weight.
+
+            Number of times term t appears in document d
+TF(t,d) = ------------------------------------------------
+             Total No.of Terms in Document
+
+
+| Aspect          | BoW         | TF-IDF     |
+| --------------- | ----------- | ---------- |
+| Word importance | Equal       | Weighted   |
+| Common words    | High weight | Low weight |
+| Meaning         | No          | Partial    |
+| Usefulness      | Basic       | Better     |
+
+the      ---> Common Word ---> Low Score
+Neural   ---> Rare Word   ---> High Score 
+
+TF  --> Word Freq in the Document 
+IDF --> Rarity of the Word in the Document 
+
+
+Word Embeddings (in NLP)
+-------------------------
+Word Embeddings are dense, low-dimensional vector representations of words that capture semantic meaning and relationships between words.
+Unlike BoW or TF-IDF, embeddings represent meaning, not just frequency.
+
+Words with similar meanings have similar vectors
+Learned from context in large text corpora
+Represent words in a continuous vector space
+
+king − man + woman ≈ queen
+
+| Word  | Vector (simplified)    |
+| ----- | ---------------------- |              king and queen vectors are close → similar meaning.
+| king  | [0.45, 0.32, -0.12, …] |
+| queen | [0.47, 0.30, -0.10, …] |
+| car   | [-0.88, 0.02, 0.91, …] |
+
+1. Word2Vec (in NLP)
+--------------------
+Word2Vec is a word embedding technique that converts words into dense numerical vectors such that words with similar meanings have similar vector representations.It was introduced by Google and is a cornerstone of modern NLP.
+
+Learns Word Meaning From Context
+
+Two Models 
+-----------
+1. CBOW (Continuous Bag of Words)
+---------------------------------
+Predicts the target word using surrounding context words
+Faster
+Better for frequent words
+
+Context: I ___ NLP
+Target: love
+
+2. Skip-Gram
+-------------
+Predicts surrounding context words using the target word
+Slower
+Better for rare words
+
+Target: love
+Context: I, NLP
+
+
+GloVe (Global Vectors for Word Representation)
+------------------------------------------------
+GloVe is a word embedding technique that learns dense vector representations of words by combining the strengths of:
+Global word co-occurrence statistics
+Local contextual information
+It was developed by Stanford NLP Group.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

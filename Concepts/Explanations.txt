@@ -1,0 +1,425 @@
+GANs 
+----
+
+Generative Adversarial Networks (GANs)
+
+A Generative Adversarial Network (GAN) is a deep learning framework used to generate new data that is similar to existing data.
+GANs are commonly used to create images, videos, audio, and synthetic datasets.
+
+
+2. Core Idea of GANs
+
+GANs work using two neural networks competing with each other:
+
+Generator (G)
+
+Discriminator (D)
+
+This competition improves both networks over time.
+
+3. Components of GAN
+a) Generator
+
+Generates fake data (e.g., fake images)
+
+Takes random noise as input
+
+Tries to produce data that looks real
+
+Goal: Fool the Discriminator
+
+b) Discriminator
+
+Acts like a classifier
+
+Takes real and fake data as input
+
+Determines whether data is real or fake
+
+Goal: Correctly identify fake data
+
+
+
+How GAN Works (Step-by-Step)
+----------------------------
+
+Random noise is given to the Generator
+
+Generator creates fake data
+
+Discriminator receives:
+
+Real data (from dataset)
+
+Fake data (from Generator)
+
+Discriminator predicts real or fake
+
+Errors are calculated
+
+Both networks update weights
+
+Process repeats until Generator produces realistic data
+
+This process is similar to a game where:
+
+Generator tries to cheat
+
+Discriminator tries to catch cheating
+
+
+
+AutoRegressive (AR) Mode1
+-------------------------
+
+An AutoRegressive (AR) model is a time series forecasting model in which the current value of a variable is explained using its own past values.
+
+it Predicts Future Values Based on Past Values 
+
+The present depends on the past.
+If you know the previous values of a time series, you can predict the next value.
+
+Example:
+
+--> Today’s stock price depends on yesterday’s and earlier prices
+
+--> Today’s temperature depends on previous days’ temperatures
+
+
+Mathematical Representation
+----------------------------
+yt​ = c + ϕ1​yt−1​ + ϕ2​yt−2​ + ⋯ + ϕp​yt−p​ + εt​
+
+
+Ex :
+
+if i Say  --> i Love Machine 
+
+it Give   --> i Love Machine Learning
+
+
+
+Responsible AI
+----------------
+
+Responsible AI refers to the practice of designing, developing, deploying, and using artificial intelligence systems in a way that is ethical, transparent, fair, safe, and accountable, while respecting human rights and societal values.
+
+
+Why Responsible AI Is Important
+
+AI systems increasingly affect:
+------------------------------
+Hiring and recruitment
+Credit and loan approvals
+Healthcare decisions
+Surveillance and security
+Education and exams
+
+If not designed responsibly, AI can:
+--------------------------------------
+Produce biased or unfair outcomes
+Violate privacy
+Cause harm or discrimination
+Make unexplainable decisions
+
+
+Responsible AI is useful because it ensures that AI systems are trustworthy, ethical, safe, and beneficial to both users and society, while reducing legal, technical, and reputational risks.
+
+1. Prevents Bias and Discrimination
+--> AI models learn from data. If the data is biased, decisions will be unfair.
+
+Usefulness:
+-----------
+--> Ensures equal treatment across gender, caste, race, and background
+--> Protects organizations from unfair or illegal decisions
+
+
+
+LLM stands for Large Language Model.
+------------------------------------
+
+An LLM is a type of Artificial Intelligence (AI) model that is trained on a very large amount of text data so it can understand, generate, and respond to human language in a meaningful way.
+
+In simple terms
+
+An LLM can:
+-----------
+Read and understand text
+Answer questions
+Write content (articles, code, emails, etc.)
+Translate languages
+Summarize information
+Assist in conversations like a human
+
+Why it is called Large
+-----------------------
+Large data: Trained on billions of words from books, websites, and articles
+Large parameters: Uses millions or billions of internal weights to learn language patterns
+Large capabilities: Can handle many tasks without being trained separately for each one
+
+
+Examples of LLMs
+-----------------
+GPT (ChatGPT)
+BERT
+LLaMA
+Claude
+Gemini
+
+
+--> What are Words in LLMs?
+
+In LLMs, words are converted into tokens.
+
+A token can be:
+----------------
+A word (computer)
+Part of a word (comp, uter)
+A symbol (@, .)
+LLMs read tokens, not raw words.
+
+Example:
+"I love programming"
+→ ["I", "love", "program", "ming"]
+Tokens are input data, not model size.
+Tokens Means --> The Text We Type or Parts of the Word Like Broken into Words 
+"I love AI"
+→ ["I", "love", "AI"]
+"Programming"
+-> ["Program", "ming"]
+
+What are Parameters in LLMs?
+Parameters are numbers (weights) inside the neural network that the model learns during training.
+Parameters control:
+--------------------
+How tokens are understood
+How next words are predicted
+They are fixed after training
+
+Examples:
+
+GPT-2 → ~1.5 billion parameters
+GPT-3 → ~175 billion parameters
+
+Parameters = model knowledge + behavior
+
+| Aspect        | Words / Tokens     | Parameters                |
+| ------------- | ------------------ | ------------------------- |
+| What they are | Input text units   | Learned numerical weights |
+| Role          | What model reads   | How model thinks          |
+| Changeable    | Yes (every prompt) | No (after training)       |
+| Measure       | Token count        | Parameter count           |
+
+
+
+Transformer
+-----------
+
+A Transformer is a deep learning architecture used to process sequence data, especially natural language.
+It is the core architecture behind LLMs such as GPT, BERT, and Gemini.
+Transformers understand context using attention instead of recurrence or convolution.
+
+Why Transformers Were Introduced
+--------------------------------
+Before Transformers:
+RNNs / LSTMs processed words one by one
+Slow training
+Difficulty handling long sentences
+Transformers solved this by:
+Processing all words at the same time
+Using attention to capture long-range dependencies
+
+Key Components of a Transformer
+Tokenization
+------------
+Input text is split into tokens and converted to numbers.
+
+
+Embedding Layer
+---------------
+Each token becomes a vector
+Captures semantic meaning
+
+Positional Encoding
+-------------------
+Since Transformers process tokens in parallel, they need position information.
+"I love AI"
+Position: 1  2  3
+
+Self-Attention (Most Important)
+--------------------------------
+Self-attention allows the model to:
+Focus on important words
+Understand relationships between words
+
+Example:
+“The animal didn’t cross the street because it was tired”
+
+soon..........
+
+
+in Transformer 
+
+Encoder understands the input (tokens)
+and Data Moves to Decoder (Same Tokens) to What We Wanted the Output
+
+
+Pre-Training
+------------
+Pre-training is the first and most important training phase of a Large Language Model (LLM), where the model learns general language knowledge from a very large dataset.
+
+During pre-training, the model learns grammar, meaning, facts, and language patterns without being trained for a specific task.
+
+
+Pre-Training Works
+-------------------
+
+1. Massive Text Data
+
+The model is trained on:
+Books
+Articles
+Websites
+Code repositories
+This data is unlabeled or weakly labeled.
+
+2. Self-Supervised Learning
+
+LLMs use self-supervised learning, meaning:
+The data itself provides the labels
+Example (Next Token Prediction):
+Input: "AI is transforming"
+Target: "technology"
+The model learns by predicting the next token.
+
+3. Parameter Learning
+
+Billions of parameters (weights) are adjusted
+The model learns:
+Sentence structure
+Word relationships
+Context understanding
+
+
+
+Fine-Tuning
+-----------
+
+Fine-tuning is the process of adapting a pre-trained model to perform a specific task or domain by training it further on a smaller, task-specific dataset.
+
+Pre-training gives general knowledge; fine-tuning gives specialization.
+
+Why Fine-Tuning is Needed
+
+A pre-trained LLM:
+Understands language generally
+Is not optimized for a specific task
+
+Fine-tuning helps to:
+Improve accuracy
+Control behavior
+Match domain-specific terminology
+Reduce irrelevant or incorrect responses
+
+
+
+RLHF
+----
+RLHF stands for Reinforcement Learning from Human Feedback.
+It is a technique used to align a language model’s behavior with human preferences by learning from human judgments rather than only from text data.
+RLHF teaches the model how humans want it to behave, not just how language works.
+
+Why RLHF is Needed
+
+After pre-training and fine-tuning:
+The model may be correct but:
+Not helpful
+Not safe
+Not polite
+Not aligned with human values
+
+RLHF improves:
+Helpfulness
+Safety
+Honesty
+Instruction-following
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

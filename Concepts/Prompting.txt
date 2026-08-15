@@ -1,0 +1,85 @@
+Zero-Shot Learning
+------------------
+
+Zero-Shot Learning (Zero-Shot Prompting) means asking a model to perform a task without giving any examples in the prompt.
+The model relies only on its pre-trained knowledge, not on task-specific examples.
+
+
+Zero-Shot in LLMs
+In LLMs, zero-shot means:
+No training on that task
+No examples in the prompt
+Just a clear instruction
+
+Prompt (Zero-Shot):
+--------------------
+Translate the following sentence to Telugu:
+"I love artificial intelligence."
+The model performs the task without seeing any example translations.
+
+
+One-Shot Learning
+-----------------
+One-Shot Learning means providing exactly one example to the model so it can understand the task and produce the correct output. The model learns the pattern from a single example and applies it to new input.
+
+Example:
+Text: "I love this movie"
+Sentiment: Positive
+
+Now analyze:
+Text: "The product is terrible"
+Sentiment:
+
+
+Few-Shot Learning
+------------------
+Few-Shot Learning means providing a small number of examples (usually 2–5) in the prompt so the model understands the task and produces better results. The model generalizes the task from a few examples without retraining.
+
+Example 1:
+Text: "I love this phone"
+Sentiment: Positive
+
+Example 2:
+Text: "The service was terrible"
+Sentiment: Negative
+
+Example 3:
+Text: "This movie was okay"
+Sentiment: Neutral
+
+Now analyze:
+Text: "The product quality is bad"
+Sentiment:
+
+
+| Method    | Examples | Accuracy |
+| --------- | -------- | -------- |
+| Zero-Shot | 0        | Low      |
+| One-Shot  | 1        | Medium   |
+| Few-Shot  | 2–5      | High     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

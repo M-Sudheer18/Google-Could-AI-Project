@@ -1,0 +1,162 @@
+Transformer Architecture 
+------------------------
+
+The Transformer consists of two main parts:
+Encoder Stack (Left side)
+Decoder Stack (Right side)
+Both stacks are repeated N times (denoted as Nx in the diagram).
+
+
+Core Mechanism of Understanding in Self-Attention
+-------------------------------------------------
+Self-Attention enables a model to understand relationships between words in a sentence by dynamically weighting their relevance to each other.
+Each word decides which other words matter to it and by how much
+
+Positional Encoding (in Transformer Architecture)
+--------------------------------------------------
+Positional Encoding is a technique used in Transformers to inject information about the order and position of words in a sequence.
+Because Transformers do not process words sequentially (unlike RNNs), they cannot naturally understand word order. Positional encoding solves this problem.
+
+
+Computer Vision (CV)
+--------------------
+Computer Vision is a field of Artificial Intelligence (AI) that enables machines to see, interpret, and understand visual information from images and videos, similar to how humans use their eyes and brain.
+Computer Vision teaches computers how to understand images and videos.
+
+
+What Computer Vision Actually Does
+Computer Vision answers questions such as:
+What objects are in this image?
+Where are they located?
+What is happening in this video?
+Is this the same face or object?
+Is there any defect or abnormality?
+
+
+A Convolutional Neural Network (CNN)
+--------------------------------------
+A Convolutional Neural Network (CNN) is a deep learning model primarily used in Computer Vision to automatically learn and extract features from images such as edges, shapes, textures, and objects.
+CNNs help machines “see” and understand images.
+
+                                     Input Image
+                                          ↓
+                                     Convolution Layer
+                                          ↓
+                                     Activation (ReLU)
+                                          ↓
+                                     Pooling Layer
+                                          ↓
+                                     Fully Connected Layer
+                                          ↓
+                                     Output
+
+
+1. Input Layer
+---------------
+Takes an image as a matrix
+Example: 224 × 224 × 3 (RGB image)
+
+2. Convolution Layer (Core of CNN)
+-----------------------------------
+What It Does
+Applies filters (kernels) to the image
+Extracts features like:
+ edges
+ corners
+ textures
+
+Example
+A 3×3 filter slides over the image and computes dot products.
+
+3. Activation Function (ReLU)
+------------------------------
+ReLU(x)=max(0,x)
+
+Purpose:
+Introduces non-linearity
+Helps model complex patterns
+Prevents vanishing gradients
+
+-Ve Become Zero(0)
+Without Relu CNN is Very Weak 
+
+
+4. Pooling Layer
+----------------
+Purpose
+Reduces spatial dimensions
+Keeps important features
+Reduces computation
+
+Common Type
+Max Pooling (2×2)
+
+
+5. Fully Connected (FC) Layer
+------------------------------
+Flattens feature maps into a vector
+Performs classification
+
+6. Output Layer
+---------------
+Softmax → multi-class classification
+Sigmoid → binary classification
+
+
+CNN Architectures (Computer Vision)
+-----------------------------------
+CNN architectures are predefined network designs that specify how convolutional, pooling, and other layers are arranged to efficiently learn visual features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

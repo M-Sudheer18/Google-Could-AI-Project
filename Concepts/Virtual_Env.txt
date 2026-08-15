@@ -1,0 +1,39 @@
+Venv
+----
+
+Process Steps
+--------------
+python -m venv venv
+                 \
+                  \                 
+                 File Name
+Here Name : Venv
+
+How to Activate 
+
+Two Ways 
+--------
+cd venv --> cd Scripts --> activate
+
+             or
+
+venv\Scripts\activate
+
+
+Running streamlit app
+-----------------------
+streamlit run app.py
+
+app.py is File Name
+
+
+
+
+
+
+
+
+
+
+
+
